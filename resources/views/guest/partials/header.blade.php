@@ -5,26 +5,32 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-between d-flex  " id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('admin.home') }}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('home') }}" target="_blank">Public Home</a>
+
           </li>
-        </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('register') }}">Register</a>
+          </li>
+        </ul> --}}
     </div>
-    <div class="">
-      <p class="fw-bolder mt-3 me-5 ">
-          {{ Auth::user()->name }}
-      </p>
+    <div class="d-flex  w-25">
+        <div class="me-3">
+            <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+        </div>
+        <div class="">
+            <a class="btn btn-secondary" href="{{ route('register') }}">Register</a>
+        </div>
     </div>
-    <span class="navbar-text">
+    {{-- <span class="navbar-text">
         <form action="{{ route('logout') }}" method="POST">
             @csrf
             <button type="submit" class="btn btn-danger">Logout</button>
         </form>
-    </span>
+    </span> --}}
       {{-- <div class=""></div> --}}
     </div>
   </nav>
