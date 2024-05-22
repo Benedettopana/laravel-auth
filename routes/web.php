@@ -4,6 +4,7 @@ use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProjectsController;
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +24,9 @@ Route::middleware(['auth', 'verified'])
         ->name('admin.')
         ->group(function (){
             Route::get('/', [DashboardController::class, 'index'])->name('home');
+            Route::resource('project', ProjectController::class);
         });
 
-Route::middleware(['auth', 'verified'])
-        ->prefix('projects')
-        ->name('projects.')
-        ->group(function(){
-            Route::resource('project', ProjectsController::class);
-        });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
