@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="mt-3">
-        <button type="submit" class="btn btn-outline-success me-3"> Aggiungi</button>
+        <button type="submit" class="btn btn-outline-success me-3">Aggiungi</button>
         <button type="reset" class="btn btn-outline-danger"> Cancella</button>
     </div>
   </form>
