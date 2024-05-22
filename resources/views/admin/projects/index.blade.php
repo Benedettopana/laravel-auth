@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="container-xl p-1 mt-3 pt-5 mt-5">
+    <div class="">
+        <a href="{{ route('admin.project.create') }}" class="btn btn-success my-5"><i class="fa-solid fa-folder-plus"></i></a>
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -20,12 +23,17 @@
               <td>{{$project->type}}</td>
               <td>{{$project->desc}}</td>
               <td class=" ">
-                <button type="button" class="btn btn-outline-secondary mb-1" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button type="button" class="btn btn-outline-secondary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
+                <form action="" method="POST">
+
+                    <button type="submit" class="btn btn-outline-warning mb-1" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </form>
+                <form action="" method="POST">
+                    <button type="button" class="btn btn-outline-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </form>
               </td>
 
           </tr>
@@ -34,7 +42,6 @@
   </table>
   <div class="paginator">
         {{$projects->links()}}
-
     </div>
 </div>
 

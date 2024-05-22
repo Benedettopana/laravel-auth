@@ -92,6 +92,9 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: var(--bg);
     // overflow: hidden;
+    & > div {
+        margin: 150px !important;
+    }
 }
 
 .dashboard {
