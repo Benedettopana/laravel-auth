@@ -18,7 +18,7 @@
     </div>
     @endif
     <div class="">
-        <a href="{{ route('admin.types.create') }}" class="btn btn-success my-5"><i class="fa-solid fa-folder-plus"></i></a>
+        <a href="{{ route('admin.type.create') }}" class="btn btn-success my-5"><i class="fa-solid fa-folder-plus"></i></a>
     </div>
     <table class="table">
       <thead>
@@ -36,12 +36,12 @@
 
               <td class="d-flex">
                 <a
-                  href="{{ route('admin.types.edit', $technology)}}"
+                  href="{{ route('admin.type.edit', $type)}}"
                   class="btn btn-outline-warning mb-1 me-2"
                   style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
                 ><i class="fa-solid fa-pen"></i></a>
 
-                <form action="{{route('admin.types.destroy', $technology)}}" method="POST">
+                <form action="{{route('admin.type.destroy', $type)}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button
@@ -59,7 +59,7 @@
       </tbody>
   </table>
   <div class="paginator">
-        {{$technologies->links()}}
+        {{-- {{$technologies->links()}} --}}
     </div>
 </div>
 </div>
